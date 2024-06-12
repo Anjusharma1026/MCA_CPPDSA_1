@@ -3,7 +3,7 @@ using namespace std;
 
 void test(int n){
     n++;
-    cout<<"value of n is:"<< n <<endl';
+    cout<<"value of n is:"<< n <<endl ;
 }
 
 int main(){
