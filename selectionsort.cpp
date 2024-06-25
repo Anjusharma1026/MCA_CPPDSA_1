@@ -16,6 +16,7 @@ void selectionSort(int arr[], int size){
 }
 
  int main(){
-
- }
+    int arr[]= {2, 3, 4, 1,  1, 5,3};
+    
+}
 
