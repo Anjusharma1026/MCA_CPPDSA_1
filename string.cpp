@@ -28,7 +28,10 @@ int main(){
     string str="Hello world, how are you";
     cout<<str;
     //cout<<str.find("world");
-    cout<<str.size();
+    //cout<<str.size();
+
+    str.append("New string");
+    cout<<str;
 
 
 }
