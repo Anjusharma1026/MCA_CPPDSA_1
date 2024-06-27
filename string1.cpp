@@ -1,6 +1,7 @@
 //return a maximum occuring character in an input string.
 //you are given a string words,you need to replace all the spaces with "@9"
 //remove all the occurences of a substring -> on leetcode check pluton
+//
 
 #include<iostream>
 #include<bits/stdc++.h>
