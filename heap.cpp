@@ -14,6 +14,10 @@ using namespace std;
 // Ith left child=2*i+1
 //for right child= 2*i+2
 
+//Deletion ->replace last with root
+//remove last
+//place root at its correct position
+
 //create heap
 class Heap{
     public:
@@ -39,6 +43,32 @@ class Heap{
             }
         }
     }
+    void deleteFromHeap(){
+        if(size==0){
+            return;
+        }
+        arr[1]= arr[size];
+        //remove last now
+        size--;
+        int i=1;
+        while(i<size){
+            int leftIndex =2*i;
+            int rightIndex = 2*i+1;
+
+            if(leftIndex < size && arr[i] < arr[leftIndex]){
+                swap(arr[i], arr[rightIndex]);
+                i= rightIndex;
+            }
+
+            else if(rightIndex < size && arr[i] < arr[rightIndex]){
+                swap(arr[i] , arr[rightIndex]);
+                i = rightIndex;
+            }
+            else{
+                return;
+            }
+        }
+    }
     void print()
     {
         for(int i =1; i <= size;i++)
@@ -57,6 +87,9 @@ int main(){
     h.insert(12);
     h.insert(7);
     h.insert(10);
+    h.print();
+
+    h.deleteFromHeap();
     h.print();
 
     
